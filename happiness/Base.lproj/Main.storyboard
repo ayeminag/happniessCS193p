@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ER8-X3-gIC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Happiness View Controller-->
+        <scene sceneID="45C-tm-WgG">
+            <objects>
+                <viewController id="ER8-X3-gIC" customClass="HappinessViewController" customModule="happiness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XIX-Gi-7cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="LQP-Hr-gmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eoH-n5-kfU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uRb-n5-hSC" customClass="FaceView" customModule="happiness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.53805462615279442" blue="0.2101685552259186" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Enu-gJ-zuk" appends="YES" id="IBi-X7-cta"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uRb-n5-hSC" secondAttribute="trailing" id="THj-Zj-BDW"/>
+                            <constraint firstItem="uRb-n5-hSC" firstAttribute="top" secondItem="eoH-n5-kfU" secondAttribute="top" id="gGw-Xj-6rV"/>
+                            <constraint firstItem="uRb-n5-hSC" firstAttribute="bottom" secondItem="LQP-Hr-gmr" secondAttribute="top" id="ge6-ID-Afw"/>
+                            <constraint firstItem="uRb-n5-hSC" firstAttribute="leading" secondItem="eoH-n5-kfU" secondAttribute="leading" id="xYr-WN-k1w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="uRb-n5-hSC" id="TH2-mv-4qr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQy-Ya-yCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Enu-gJ-zuk">
+                    <connections>
+                        <action selector="changeHappiness:" destination="ER8-X3-gIC" id="ENg-23-QCu"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="534" y="345"/>
+        </scene>
+    </scenes>
+</document>
